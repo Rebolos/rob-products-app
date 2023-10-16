@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">rob-products-app</string>
+    <string name="add">Add</string>
+    <string name="shop">Shop</string>
+    <string name="products">Products</string>
+    <string name="your_name">Your name</string>
+    <string name="your_email">Your Email</string>
+    <string name="cart_item_successfully_deleted_message">Cart successfully deleted!</string>
+    <string name="cart_success_message"><![CDATA[%1$s has been added to your cart.]]></string>
+    <string name="no_cart_item_found_message">Your cart is currently empty!</string>
+    <string name="cart_total">$%d</string>
+    <string name="cart">Cart</string>
+    <string name="checkout">Checkout</string>
+    <string name="cart_description_message">Click here to continue shopping.</string>
+    <string name="buy_now">Buy now</string>
+    <string name="cart_list_field_is_required">You must have at least one item in your cart to proceed with the checkout.</string>
+    <string name="terms_and_condition_is_required_error_message">Terms and condition is required.</string>
+    <string name="first_name_error_message">First name must not be empty.</string>
+    <string name="email_must_not_be_empty">Email must not be empty.</string>
+</resources>

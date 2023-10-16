@@ -29,7 +29,6 @@ class CartListViewModel @Inject constructor(private val cartUseCase: CartUseCase
         get() = CartViewState()
 
     init {
-        Log.d("TEST", "Init ")
         viewModelScope.launchWithTimber {
             launch { getAllListOfCarts() }
             launch { getAllTotalAddedInCart() }
@@ -79,11 +78,9 @@ class CartListViewModel @Inject constructor(private val cartUseCase: CartUseCase
                 }
             },
             onError = { throwable ->
-                Log.d("TEST", "Throwable $throwable")
                 showError(throwable)
             },
             onSuccessResult = { result ->
-                Log.d("TEST", "RESULT $result")
                 updateState { currentState ->
 
                     currentState.copy(
@@ -125,11 +122,9 @@ class CartListViewModel @Inject constructor(private val cartUseCase: CartUseCase
                 }
             },
             onError = { throwable ->
-                Log.d("TEST", "Error $throwable")
                 showError(throwable)
             },
             onSuccessResult = { cartTotal ->
-                Log.d("TEST", "Cart total BAI $cartTotal")
                 updateState { currentState ->
                     currentState.copy(cartTotal = cartTotal)
                 }

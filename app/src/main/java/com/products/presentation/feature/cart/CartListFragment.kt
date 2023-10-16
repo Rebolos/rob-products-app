@@ -60,7 +60,6 @@ class CartListFragment : BaseViewModelFragment<FragmentListCartBinding, CartList
                 viewModel.actionState.collectLatest { action ->
                     when (action) {
                         is CartActionState.NavigateToCheckout -> {
-                            Log.d("TEST","Total price ${action.totalPrice}")
                             findNavController().navigate(
                                 CartListFragmentDirections.actionCartListFragmentToCheckoutFragment(
                                     cartItem = action.cartList.toTypedArray(),

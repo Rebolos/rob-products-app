@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.products.presentation.feature.products.ui.ProductListFragment"
+        android:label="ProductListFragment"
+        tools:layout="@layout/fragment_list_products">
+
+    </fragment>
+    <action
+        android:id="@+id/actionToDialogSuccessFragment"
+        app:destination="@+id/cartDialogSuccessFragment">
+        <argument
+            android:name="cartName"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true"/>
+    </action>
+
+    <action
+        android:id="@+id/actionToCartFragment"
+        app:destination="@+id/cartListFragment">
+        <argument
+            android:name="cartName"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true"/>
+    </action>
+    <dialog
+        android:id="@+id/cartDialogSuccessFragment"
+        android:name="com.products.presentation.feature.cart.dialogsuccess.CartDialogSuccessFragment"
+        android:label="CartDialogSuccessFragment"
+        tools:layout="@layout/dialog_cart_success">
+        <argument
+            android:name="cartName"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true"/>
+    </dialog>
+    <fragment
+        android:id="@+id/cartListFragment"
+        android:name="com.products.presentation.feature.cart.CartListFragment"
+        android:label="CartListFragment"
+        tools:layout="@layout/fragment_list_cart">
+
+        <action
+            android:id="@+id/action_cartListFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment">
+            <argument
+                android:name="cartItem"
+                android:defaultValue="@null"
+                app:argType="com.products.presentation.feature.cart.model.CartItemUIModel[]"
+                app:nullable="true" />
+            <argument
+                android:name="orderTotal"
+                android:defaultValue="0"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.products.presentation.feature.checkout.CheckoutFragment"
+        android:label="CheckoutFragment">
+        <argument
+            android:name="cartItem"
+            android:defaultValue="@null"
+            app:argType="com.products.presentation.feature.cart.model.CartItemUIModel[]"
+            app:nullable="true" />
+        <argument
+            android:name="orderTotal"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

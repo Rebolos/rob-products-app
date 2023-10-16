@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Styles.Input.TextInputLayout.Filled" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+
+
+        <item name="boxCollapsedPaddingTop">4dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+    </style>
+    <style name="Styles.Input.TextInputEditText.Filled.Border" parent="@style/Styles.Input.TextInputEditText.Filled">
+        <item name="android:background">@drawable/bg_rounded_input_text</item>
+    </style>
+    <style name="Styles.Input.TextInputEditText" parent="">
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+    <style name="Styles.Input.TextInputEditText.Filled" parent="">
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BestLife.BottomSheetDialog.Transparent" parent="BestLife.BottomSheetDialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="bottomSheetStyle">@style/BestLife.Transparent</item>
+    </style>
+    <style name="BestLife.Transparent" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="BestLife.BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BestLife.BottomSheet</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="BestLife.BottomSheet" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:background">@drawable/bg_white_rounded_top_24dp</item>
+    </style>
+</resources>

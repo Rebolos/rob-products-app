@@ -79,14 +79,14 @@ class CheckoutFragment : BaseViewModelFragment<FragmentCheckoutBinding, Checkout
             CheckoutActionState.CheckoutFieldsError -> handleCheckoutFieldsError()
             CheckoutActionState.InvalidEmailError -> handleInvalidEmailError()
             CheckoutActionState.InvalidNameError -> handleInvalidNameError()
-            is CheckoutActionState.NavigateToOrderConfirmation -> { /* Handle navigation */
-            }
+            is CheckoutActionState.NavigateToOrderConfirmation -> {}
 
             CheckoutActionState.TermsAndConditionIsRequired -> {
                 showToastErrorMessage(getString(R.string.terms_and_condition_is_required_error_message))
             }
         }
     }
+
     private fun showToastErrorMessage(message: String) {
         requireContext().showToast(message = message)
     }

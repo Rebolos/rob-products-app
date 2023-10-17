@@ -8,6 +8,6 @@ fun Context.showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, message, duration).show()
 }
 @Dimension(unit = Dimension.PX)
-fun Context.convertDpToPx(dp: Float): Int { // todo put this in the common module
+fun Context.convertDpToPx(dp: Float): Int {
     return (dp * resources.displayMetrics.density + 0.5f).toInt()
 }

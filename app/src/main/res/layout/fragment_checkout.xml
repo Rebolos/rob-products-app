@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -96,16 +97,19 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPay"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:layout_constraintEnd_toEndOf="@+id/textInputYourEmailLayout"
-            app:layout_constraintStart_toStartOf="@+id/textInputYourEmailLayout"
+            android:layout_height="@dimen/standard_compound_button_min_height"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
             android:backgroundTint="#1947E5"
             android:fontFamily="@font/montserrat_regular"
-            android:textStyle="bold"
-            android:textSize="21sp"
             android:lineHeight="28dp"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputYourEmailLayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textInputYourEmailLayout"
             app:layout_constraintTop_toBottomOf="@+id/customSwitch"
-            android:layout_marginTop="@dimen/margin_large"
             tools:text="Pay $350" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

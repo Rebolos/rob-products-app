@@ -5,7 +5,7 @@
     <string name="products">Products</string>
     <string name="your_name">Your name</string>
     <string name="your_email">Your Email</string>
-    <string name="cart_item_successfully_deleted_message">Cart successfully deleted!</string>
+    <string name="cart_item_successfully_deleted_message">Item successfully deleted!</string>
     <string name="cart_success_message"><data> <b>%1$s</b> has \n been added to your cart.</data></string>
     <string name="no_cart_item_found_message">Your cart is currently empty!</string>
     <string name="cart_total">$%d</string>

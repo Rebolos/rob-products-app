@@ -9,4 +9,15 @@
     <color name="pink">#FFBD12</color>
     <color name="green">#00C6AE</color>
     <color name="light_purple">#E9E7FC</color>
+    <color name="colorOnLightRegular">#18254A</color>
+    <color name="colorOnLightSecondary">#525B77</color>
+    <color name="colorOnLightTertiary">#8B92A4</color>
+    <color name="colorOnPrimary">#18254A</color>
+    <color name="colorOnSecondary">#525B77</color>
+    <color name="colorOnAlertError">#FFFFFF</color>
+    <color name="colorPurpleHeart">#4728D8</color>
+    <color name="colorOnAlertWarning">#000000</color>
+    <color name="colorOnAlertSuccess">#000000</color>
+    <color name="colorAlertSuccess">#7DDB25</color>
+    <color name="colorAlertError">#F10021</color>
 </resources>

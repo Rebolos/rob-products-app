@@ -1,6 +1,7 @@
 package com.rob_products_data.feature.checkout
 
 import android.content.Context
+import android.util.Log
 import com.google.gson.Gson
 import com.rob_product_common.utils.DispatcherProvider
 import com.rob_products.models.CartItem
@@ -18,7 +19,7 @@ class OrderJsonFileStorage @Inject constructor(
 ) {
 
     suspend fun saveOrderToJson(listOfCartItems: List<CartItem>, total: Int): Pair<String?, Boolean> {
-        val uniqueID = "${System.currentTimeMillis()}_${Random.nextInt(10000)}"
+        val uniqueID = (100000 + Random.nextInt(900000)).toString()
         val uniqueOrderID = "order_$uniqueID"
         val order =
             Order(orderId = uniqueOrderID, listOfCarts = listOfCartItems, totalPrice = total)

@@ -1,10 +1,27 @@
 # Roberto Shopping Cart Proof-of-Concept Project Summary
 
 **Objective**: Develop a shopping cart system allowing users to add products, complete orders, and store order data.
-1. [Architecture](#architecture)
-2. [Features](#features)
-3. [User Interface](#user-interface)
-4. [Teck stack](#technology-used)
+1. [Get Started](#getting-started)
+2. [Architecture](#architecture)
+3. [Features](#features)
+4. [UI](#ui)
+5. [Teck stack](#technology-used)
+
+
+
+## Getting Started
+
+Follow these steps to get started with the project:
+
+1. **Clone the Repository**: Open your command line or terminal and use the following command to clone the project repository to your local machine:
+
+   ```bash
+   git clone https://github.com/Rebolos/rob-products-app.git
+2. **Locate the Project Folder**: Navigate to the project's root folder after cloning.
+
+3) **Import into Android Studio**: Open Android Studio, select File" > "Open...", and choose the project's root folder. Click "OK" to import the project.
+
+That's it! You are now ready to start working with the project in Android Studio.
 
 ## Architecture
 

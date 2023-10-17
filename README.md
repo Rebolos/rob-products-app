@@ -6,14 +6,14 @@
 3. [UI](#ui)
 4. [Teck stack](#technology-used)
 
-**Architecture**
+## Architecture
 
 - **MVVM + Clean Architecture**:
-    - Combines Clean Architecture's separation of concerns with MVVM's UI-focused structure.
-    - Ensures clear separation of concerns for testability and maintainability.
-    - MVVM separates UI logic from data and business logic through ViewModels, promoting loose coupling and testability.
+  - Combines Clean Architecture's separation of concerns with MVVM's UI-focused structure.
+  - Ensures clear separation of concerns for testability and maintainability.
+  - MVVM separates UI logic from data and business logic through ViewModels, promoting loose coupling and testability.
 
-**Features**:
+## Features
 - Fetch and display products from `products.json`.
 - Real-time cart updates.
 - Persistent cart contents.
@@ -21,7 +21,7 @@
 - Save order data as `.json` files (e.g., `order_2948281.json`) on checkout screen.
 
 
-**UI**:
+## UI
 
 **TechStack**:
 - Programming Language: Kotlin
@@ -34,13 +34,13 @@
 - **Flow Binding**: Simplifies UI component interaction using Kotlin Flow and etc  find `buildSrc module open Libs`
 
 
-**Project Structure**
+## Project Structure
 
 - **App Module** - is the pesentation layer that contains the following:
-    - Activies
-    - Fragments
-    - ViewModels
-    - resources (e.g. layout, navigation, strings, menu, styles, etc.)
+  - Activies
+  - Fragments
+  - ViewModels
+  - resources (e.g. layout, navigation, strings, menu, styles, etc.)
 - **Data Module** - Supplying data to the app sourced from both local and network modules. See example below:
 - [`ProductRepository`](https://github.com/Rebolos/rob-products-app/blob/develop/data/src/main/java/com/rob_products_data/feature/product/source/ProductRepository.kt)
 - [`ProductRepositoryImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/data/src/main/java/com/rob_products_data/feature/product/source/impl/ProductRepositoryImpl.kt)
@@ -53,9 +53,9 @@
 - [`ProductRemoteSource`](https://github.com/Rebolos/rob-products-app/blob/develop/network/src/main/java/com/example/network/feature/products/model/ProductRemoteSource.kt)
 - [`ProductRemoteSourceImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/network/src/main/java/com/example/network/feature/products/model/ProductRemoteSourceImpl.kt)
 - **Local Module** - Supplying data from local sources, such as a database, shared preferences, dao (_Data Access Object_), and more. See example below:
-    - [`ProductLocalSource`](https://github.com/Rebolos/rob-products-app/blob/develop/local/src/main/java/com/roberto_product/local/feature/product/ProductLocalSource.kt)
-    - [`ProductLocalSourceImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/local/src/main/java/com/roberto_product/local/feature/product/ProductLocalSourceImpl.kt)
+  - [`ProductLocalSource`](https://github.com/Rebolos/rob-products-app/blob/develop/local/src/main/java/com/roberto_product/local/feature/product/ProductLocalSource.kt)
+  - [`ProductLocalSourceImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/local/src/main/java/com/roberto_product/local/feature/product/ProductLocalSourceImpl.kt)
 - **Domain Module**: This module holds use cases responsible for managing business logic, promoting clean code organization, and adhering to the Single Responsibility principle in the SOLID framework. For a deeper understanding of use cases, you can refer to this [link](https://developer.android.com/topic/architecture/domain-layer). See example below in the actual code
-    - [`UseCases`](https://github.com/Rebolos/rob-products-app/tree/develop/domain/src/main/java/com/rob_product_domain/usecase/feature/product)
+  - [`UseCases`](https://github.com/Rebolos/rob-products-app/tree/develop/domain/src/main/java/com/rob_product_domain/usecase/feature/product)
 
 - **Common Styles Module** - This Manages app theming and styling, ensuring a consistent source for fonts and enhancing project maintainability and scalability.

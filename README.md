@@ -3,7 +3,7 @@
 **Objective**: Develop a shopping cart system allowing users to add products, complete orders, and store order data.
 1. [Architecture](#architecture)
 2. [Features](#features)
-3. [UI](#user-inteface)
+3. [User Interface](#user-interface)
 4. [Teck stack](#technology-used)
 
 ## Architecture

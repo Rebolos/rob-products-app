@@ -39,6 +39,10 @@ class ProductListFragment :
     BaseViewModelFragment<FragmentListProductsBinding, ProductListViewModel>() {
     private var adapter: ProductListAdapter by autoCleared()
 
+    override fun isExitOnBack(): Boolean =
+        true
+
+    override fun canBack(): Boolean = true
     val mainViewModel: MainViewModel by activityViewModels()
     private var productCategory: ProductCategoryAdapter by autoCleared()
     override fun getLayoutId(): Int = R.layout.fragment_list_products

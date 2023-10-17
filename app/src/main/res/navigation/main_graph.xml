@@ -19,7 +19,7 @@
             android:name="cartName"
             android:defaultValue="@null"
             app:argType="string"
-            app:nullable="true"/>
+            app:nullable="true" />
     </action>
 
     <action
@@ -29,7 +29,7 @@
             android:name="cartName"
             android:defaultValue="@null"
             app:argType="string"
-            app:nullable="true"/>
+            app:nullable="true" />
     </action>
     <dialog
         android:id="@+id/cartDialogSuccessFragment"
@@ -40,7 +40,7 @@
             android:name="cartName"
             android:defaultValue="@null"
             app:argType="string"
-            app:nullable="true"/>
+            app:nullable="true" />
     </dialog>
     <fragment
         android:id="@+id/cartListFragment"
@@ -65,7 +65,8 @@
     <fragment
         android:id="@+id/checkoutFragment"
         android:name="com.products.presentation.feature.checkout.CheckoutFragment"
-        android:label="CheckoutFragment">
+        android:label="CheckoutFragment"
+        tools:layout="@layout/fragment_checkout">
         <argument
             android:name="cartItem"
             android:defaultValue="@null"
@@ -75,6 +76,28 @@
             android:name="orderTotal"
             android:defaultValue="0"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_orderConfirmationFragment"
+            app:destination="@id/orderConfirmationFragment" />
+        <argument
+            android:name="orderId"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderConfirmationFragment"
+        android:name="com.products.presentation.feature.orderconfirmation.OrderConfirmationFragment"
+        android:label="OrderConfirmationFragment"
+        tools:layout="@layout/fragment_order_confirmation">
+        <argument
+            android:name="orderId"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_orderConfirmationFragment_to_productListFragment"
+            app:destination="@id/productListFragment"
+            app:popUpTo="@+id/orderConfirmationFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>

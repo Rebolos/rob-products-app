@@ -67,11 +67,14 @@ class MainActivity : BaseViewModelActivity<ActivityMainBinding, MainViewModel>()
             }
 
         viewModel.actionState
-            .distinctUntilChanged()
-            .collectViewModelState(this) { errorState ->
-                when (errorState) {
+            .collectViewModelState(this) { actionState ->
+                when (actionState) {
                     is MainActionState.ShowSuccessMessage -> {
-                        navController().navigate(MainGraphDirections.actionToDialogSuccessFragment())
+                        navController().navigate(
+                            MainGraphDirections.actionToDialogSuccessFragment(
+                                actionState.productName,
+                            ),
+                        )
                     }
                 }
             }

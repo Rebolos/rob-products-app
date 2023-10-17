@@ -36,26 +36,31 @@
 
 ## Project Structure
 
-- **App Module** - is the pesentation layer that contains the following:
-  - Activies
+- **App Module**: Presentation layer that contains:
+  - Activities
   - Fragments
   - ViewModels
-  - resources (e.g. layout, navigation, strings, menu, styles, etc.)
-- **Data Module** - Supplying data to the app sourced from both local and network modules. See example below:
-- [`ProductRepository`](https://github.com/Rebolos/rob-products-app/blob/develop/data/src/main/java/com/rob_products_data/feature/product/source/ProductRepository.kt)
-- [`ProductRepositoryImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/data/src/main/java/com/rob_products_data/feature/product/source/impl/ProductRepositoryImpl.kt)
-- **Common Module**- Common modules, also known as core modules, contain code that other modules frequently use. They reduce redundancy and don't represent any specific layer in an app's architecture suc ash utils, helper,extensions. See example below
--  [`Common Utils`]([`ProductRemoteSource`](https://github.com/Rebolos/rob-products-app/blob/develop/network/src/main/java/com/example/network/feature/products/model/ProductRemoteSource.kt))
--
-- **BuildSrc Module** - This module it serves as a way to abstract and simplify the process of managing dependencies, especially when working on large projects with multi module projects. See Example below
-- [`BuildSrc`](https://github.com/Rebolos/rob-products-app/tree/develop/buildSrc/src/main/java)
-- **Network Module** - This module is responsible for supplying data from network sources, including DTO (_Data Transfer Object_) and all APIs. See example below:
-- [`ProductRemoteSource`](https://github.com/Rebolos/rob-products-app/blob/develop/network/src/main/java/com/example/network/feature/products/model/ProductRemoteSource.kt)
-- [`ProductRemoteSourceImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/network/src/main/java/com/example/network/feature/products/model/ProductRemoteSourceImpl.kt)
-- **Local Module** - Supplying data from local sources, such as a database, shared preferences, dao (_Data Access Object_), and more. See example below:
+  - Resources (e.g. layout, navigation, strings, menu, styles, etc.)
+
+- **Data Module**: Supplies data to the app from both local and network modules. See examples below:
+  - [`ProductRepository`](https://github.com/Rebolos/rob-products-app/blob/develop/data/src/main/java/com/rob_products_data/feature/product/source/ProductRepository.kt)
+  - [`ProductRepositoryImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/data/src/main/java/com/rob_products_data/feature/product/source/impl/ProductRepositoryImpl.kt)
+
+- **Common Module**: Common modules, also known as core modules, contain code frequently used across modules. They reduce redundancy and don't represent any specific layer in an app's architecture. See example below:
+  - [`Common Utils`](https://github.com/Rebolos/rob-products-app/blob/develop/network/src/main/java/com/example/network/feature/products/model/ProductRemoteSource.kt)
+
+- **BuildSrc Module**: This module serves as a way to abstract and simplify the process of managing dependencies, especially when working on large multi-module projects. See example below:
+  - [`BuildSrc`](https://github.com/Rebolos/rob-products-app/tree/develop/buildSrc/src/main/java)
+
+- **Network Module**: This module is responsible for supplying data from network sources, including DTOs (Data Transfer Objects) and all APIs. See examples below:
+  - [`ProductRemoteSource`](https://github.com/Rebolos/rob-products-app/blob/develop/network/src/main/java/com/example/network/feature/products/model/ProductRemoteSource.kt)
+  - [`ProductRemoteSourceImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/network/src/main/java/com/example/network/feature/products/model/ProductRemoteSourceImpl.kt)
+
+- **Local Module**: Supplies data from local sources, such as a database, shared preferences, DAOs (Data Access Objects), and more. See examples below:
   - [`ProductLocalSource`](https://github.com/Rebolos/rob-products-app/blob/develop/local/src/main/java/com/roberto_product/local/feature/product/ProductLocalSource.kt)
   - [`ProductLocalSourceImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/local/src/main/java/com/roberto_product/local/feature/product/ProductLocalSourceImpl.kt)
-- **Domain Module**: This module holds use cases responsible for managing business logic, promoting clean code organization, and adhering to the Single Responsibility principle in the SOLID framework. For a deeper understanding of use cases, you can refer to this [link](https://developer.android.com/topic/architecture/domain-layer). See example below in the actual code
+
+- **Domain Module**: This module holds use cases responsible for managing business logic, promoting clean code organization, and adhering to the Single Responsibility principle in the SOLID framework. For a deeper understanding of use cases, you can refer to this [link](https://developer.android.com/topic/architecture/domain-layer). See examples below in the actual code:
   - [`UseCases`](https://github.com/Rebolos/rob-products-app/tree/develop/domain/src/main/java/com/rob_product_domain/usecase/feature/product)
 
-- **Common Styles Module** - This Manages app theming and styling, ensuring a consistent source for fonts and enhancing project maintainability and scalability.
+- **Common Styles Module**: Manages app theming and styling, ensuring a consistent source for fonts and enhancing project maintainability and scalability.

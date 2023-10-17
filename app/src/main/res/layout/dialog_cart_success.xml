@@ -4,12 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
-            style="@style/Styles.Card"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/green"
@@ -18,31 +15,71 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txtCartDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Fur-neck Jacket has been added to your cart." />
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardCountCardView"
-                style="@style/Styles.Card"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                app:cardCornerRadius="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/txtCartCount"
+                    android:id="@+id/txtProductName"
                     android:layout_width="wrap_content"
-                    android:layout_height="4dp" />
-            </com.google.android.material.card.MaterialCardView>
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:textColor="@color/dark_shade"
+                    android:textSize="17sp"
+                    app:fontFamily="@font/monserrat_bold"
+                    app:layout_constraintBottom_toTopOf="@+id/txtAddedToCart"
+                    android:layout_marginTop="@dimen/margin_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Fur-neck Jacket" />
 
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtCartDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:textFontWeight="700"
+                    android:textSize="17sp"
+                    app:fontFamily="@font/montserrat_regular"
+                    app:layout_constraintStart_toEndOf="@+id/txtProductName"
+                    app:layout_constraintTop_toTopOf="@+id/txtProductName"
+                    android:text="@string/has_been" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtAddedToCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textFontWeight="700"
+                    android:textSize="17sp"
+                    android:text="@string/added_to_your_cart"
+                    app:fontFamily="@font/montserrat_regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txtProductName"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductName"
+                    android:layout_marginBottom="@dimen/margin_large"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:backgroundTint="@color/light_purple"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

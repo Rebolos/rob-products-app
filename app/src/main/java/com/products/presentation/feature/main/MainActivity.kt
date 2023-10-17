@@ -40,6 +40,7 @@ class MainActivity : BaseViewModelActivity<ActivityMainBinding, MainViewModel>()
             R.id.cartListFragment -> getString(R.string.cart)
             R.id.productListFragment -> getString(R.string.products)
             R.id.checkoutFragment -> getString(R.string.checkout)
+            R.id.orderConfirmationFragment -> getString(R.string.order_confirmation)
             else -> ""
         }
     }

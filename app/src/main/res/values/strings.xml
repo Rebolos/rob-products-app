@@ -12,6 +12,7 @@
     <string name="total">Pay $%d</string>
     <string name="cart">Cart</string>
     <string name="checkout">Checkout</string>
+    <string name="order_confirmation">Order Confirmation</string>
     <string name="cart_description_message">Click here to continue shopping.</string>
     <string name="buy_now">Buy now</string>
     <string name="cart_list_field_is_required">You must have at least one item in your cart to proceed with the checkout.</string>

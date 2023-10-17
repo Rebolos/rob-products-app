@@ -90,6 +90,8 @@ class CheckoutViewModel @Inject constructor(
         )
         if (!areCheckoutFieldsValid) {
             return
+        } else {
+            mutableActionState.emit(CheckoutActionState.ClearFieldsError)
         }
         handleResourceFlow(
             resourceFlow = {
@@ -125,8 +127,8 @@ class CheckoutViewModel @Inject constructor(
         listOfCarts: List<CartItem>,
         total: Int,
     ): Boolean {
-        val isEmailEmpty = userEmailInput.isEmpty()
-        val isNameEmpty = nameInput.isEmpty()
+        val isEmailEmpty = userEmailInput.isNullOrEmpty()
+        val isNameEmpty = nameInput.isNullOrEmpty()
         val isListOfCarts = listOfCarts.isEmpty()
         if (isListOfCarts) {
             error(CheckoutActionState.CartListIsRequired)
@@ -156,6 +158,7 @@ class CheckoutViewModel @Inject constructor(
     }
 
     private suspend fun deleteAllCartItems() {
+        val currentState = getCurrentState()
         handleResourceFlow(
             resourceFlow = {
                 categoryUseCase.deleteAllCartsItem()
@@ -166,10 +169,10 @@ class CheckoutViewModel @Inject constructor(
                 }
             },
             onSuccessResult = { data ->
-                val currentState = getCurrentState()
                 currentState.orderId?.let { orderId ->
                     mutableActionState.emit(CheckoutActionState.NavigateToOrderConfirmation(orderId = orderId))
                 }
+                    ?: throw IllegalStateException("Order ID is null, cannot navigate to order confirmation")
             },
             onError = { error ->
                 showError(error)

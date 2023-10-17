@@ -5,7 +5,7 @@ import javax.inject.Inject
 
 class CheckoutRepositoryImpl @Inject constructor(private val orderJsonFileStorage: OrderJsonFileStorage) :
     CheckoutRepository {
-    override suspend fun createAndSaveOrder(carts: List<CartItem>, total: Int): Boolean {
+    override suspend fun createAndSaveOrder(carts: List<CartItem>, total: Int): Pair<String?, Boolean> {
         return orderJsonFileStorage.saveOrderToJson(listOfCartItems = carts, total = total)
     }
 }

@@ -22,8 +22,14 @@
 
 
 ## UI
-![product_list](https://github.com/Rebolos/rob-products-app/assets/67263430/a085bab3-6bcb-49e8-abbc-7cd923a67df3)
+-  Product List
+![Product List](https://github.com/Rebolos/rob-products-app/assets/67263430/a085bab3-6bcb-49e8-abbc-7cd923a67df3)
 
+- Cart List
+![Cart List](https://github.com/Rebolos/rob-products-app/assets/67263430/053b4368-712c-4748-8d9b-4527d9756581)
+
+-  Order Confirmation
+![Order Confirmation](https://github.com/Rebolos/rob-products-app/assets/67263430/3599d470-bfbc-4f93-9a65-329ccf341421)
 
 **TechStack**:
 - Programming Language: Kotlin

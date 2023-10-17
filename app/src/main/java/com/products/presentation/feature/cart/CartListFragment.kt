@@ -1,13 +1,11 @@
 package com.products.presentation.feature.cart
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import com.products.presentation.feature.cart.adapter.CartListAdapter
 import com.products.presentation.feature.cart.state.CartAction
 import com.products.presentation.feature.cart.state.CartActionState
@@ -22,6 +20,7 @@ import com.rob_product_common.extensions.setVisible
 import com.rob_product_common.extensions.showToast
 import com.rob_product_common.utils.autoCleared
 import com.rob_product_common.utils.launchWithTimber
+import com.rob_product_common.utils.snackbar.ViewUtils
 import com.rob_product_common.utils.viewLifecycleScope
 import com.rob_product_common.widget.MarginItemDecoration
 import com.rob_products_app.R
@@ -70,7 +69,10 @@ class CartListFragment : BaseViewModelFragment<FragmentListCartBinding, CartList
 
                         CartActionState.ShowSuccessDeleteMessage -> {
                             mainViewModel.action(MainAction.RefreshCartCount)
-                            requireContext().showToast(getString(R.string.cart_item_successfully_deleted_message))
+                            ViewUtils.showGenericSuccessSnackBar(
+                                binding.root,
+                                getString(R.string.cart_item_successfully_deleted_message),
+                            )
                         }
                     }
                 }

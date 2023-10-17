@@ -26,4 +26,5 @@
     <string name="your_order_id_is">Your order ID is</string>
     <string name="return_to_products">Return to Products</string>
     <string name="order_id">#%1$d</string>
+    <string name="terms_and_condition">I agree to the terms and conditions</string>
 </resources>

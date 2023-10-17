@@ -22,7 +22,9 @@
 
 
 ## UI
-
+![Alt Text](https://drive.google.com/uc?export=download&id=1F7D6N6tI6Sca0EEgRgo_91PZ0hk_U7KT)
+![Alt Text](https://drive.google.com/uc?export=download&id=1F7D6N6tI6Sca0EEgRgo_91PZ0hk_U7KT)
+![Alt Text](https://drive.google.com/uc?export=download&id=1F7D6N6tI6Sca0EEgRgo_91PZ0hk_U7KT)
 **TechStack**:
 - Programming Language: Kotlin
 - **Dagger Hilt**: Simplifies dependency injection in Android by generating code at compile time.
@@ -31,7 +33,7 @@
 - **Coroutines**: Facilitates asynchronous tasks in Kotlin, enhancing code readability.
 - **Shared Preferences**: Stores small key-value data for app preferences and settings.
 - **Timber**: Logging library for Android, improving debugging.
-- **Flow Binding**: Simplifies UI component interaction using Kotlin Flow and etc  find `buildSrc module open Libs`
+- **Flow Binding**: Simplifies UI component interaction using Kotlin Flow and more. To find the library in the `buildSrc` module, open [Libs.kt](https://github.com/Rebolos/rob-products-app/blob/develop/buildSrc/src/main/java/Libs.kt).
 
 
 ## Project Structure
@@ -47,7 +49,7 @@
   - [`ProductRepositoryImpl`](https://github.com/Rebolos/rob-products-app/blob/develop/data/src/main/java/com/rob_products_data/feature/product/source/impl/ProductRepositoryImpl.kt)
 
 - **Common Module**: Common modules, also known as core modules, contain code frequently used across modules. They reduce redundancy and don't represent any specific layer in an app's architecture. See example below:
-  - [`Common Utils`](https://github.com/Rebolos/rob-products-app/blob/develop/network/src/main/java/com/example/network/feature/products/model/ProductRemoteSource.kt)
+  - [`Common Utils`](https://github.com/Rebolos/rob-products-app/tree/develop/common/src/main/java/com/rob_product_common)
 
 - **BuildSrc Module**: This module serves as a way to abstract and simplify the process of managing dependencies, especially when working on large multi-module projects. See example below:
   - [`BuildSrc`](https://github.com/Rebolos/rob-products-app/tree/develop/buildSrc/src/main/java)

@@ -25,4 +25,5 @@
     <string name="added_to_your_cart">added to your cart</string>
     <string name="your_order_id_is">Your order ID is</string>
     <string name="return_to_products">Return to Products</string>
+    <string name="order_id">#%1$d</string>
 </resources>

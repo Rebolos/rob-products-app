@@ -19,7 +19,7 @@ class OrderConfirmationFragment : BaseFragment<FragmentOrderConfirmationBinding>
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.setUpButtons()
-        binding.txtOrderId.text = args.orderId.toString()
+        binding.txtOrderId.text = getString(R.string.order_id, args.orderId)
     }
 
     private fun FragmentOrderConfirmationBinding.setUpButtons() {

@@ -36,6 +36,7 @@
                 tools:listitem="@layout/item_product_category"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/margin_large"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toTopOf="@+id/productsRecyleView"
